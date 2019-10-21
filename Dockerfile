@@ -1,5 +1,5 @@
-FROM iteblog/hbase:2.0
-MAINTAINER iteblog <wyphao.2007@163.com>
+FROM iteblog/hbase-phoenix-5.0-docker:2.0
+MAINTAINER iteblog https://www.iteblog.com
 
 RUN apt-get update && apt-get install -y supervisor python-pip && pip install supervisor-stdout
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
