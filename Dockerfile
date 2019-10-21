@@ -1,4 +1,4 @@
-FROM iteblog/hbase-phoenix-5.0-docker:2.0
+FROM centos:6.7
 MAINTAINER iteblog https://www.iteblog.com
 
 RUN apt-get update && apt-get install -y supervisor python-pip && pip install supervisor-stdout
