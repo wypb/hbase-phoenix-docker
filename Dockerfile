@@ -1,7 +1,9 @@
-FROM centos:6.7
+FROM iteblog/hbase-docker:1.0
 MAINTAINER iteblog https://www.iteblog.com
 
 RUN apt-get update && apt-get install -y supervisor python-pip && pip install supervisor-stdout
+#RUN yum -y update && 
+#RUN yum install -y wget && yum install -y epel-release && yum install -y supervisor &&  yum install -y python-pip && pip install supervisor-stdout
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 ENV BUILD_REPO=http://archive.apache.org/dist/phoenix
