@@ -65,3 +65,9 @@ No rows affected (0.774 seconds)
 2 rows selected (0.054 seconds)
 0: jdbc:phoenix:>
 ```
+
+指定主机端口和容器端口映射
+```
+docker run -it -p 8765:8765 iteblog/hbase-phoenix-docker
+```
+`-p 8765:8765` 第一个8765是我们主机的端口，第二个8765是容器里面的端口，使用上面命令之后我们就可以直接用 shell 链接到 Phoenix 了。
